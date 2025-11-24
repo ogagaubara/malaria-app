@@ -1,0 +1,14 @@
+{
+  "name": "malaria/maldx",
+  "description": "Malaria diagnosis web application (PHP frontend + Java classifier service)",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Maldx\\": "src/"
+    }
+  }
+}

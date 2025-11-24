@@ -1,0 +1,36 @@
+services:
+  php:
+    build: ./php
+    ports:
+      - "8081:80"
+    environment:
+      JAVA_API_URL: http://java-classifier:8080/diagnose
+      DB_HOST: mysql
+      DB_NAME: health_app
+      DB_USER: health_user
+      DB_PASS: health_pass
+    depends_on:
+      - java
+      - mysql
+
+  java:
+    build: ./java
+    container_name: java-classifier
+    ports:
+      - "8080:8080"
+
+  mysql:
+    image: mysql:8.0
+    container_name: health-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: health_app
+      MYSQL_USER: health_user
+      MYSQL_PASSWORD: health_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

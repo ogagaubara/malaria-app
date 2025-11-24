@@ -1,0 +1,9 @@
+Command: java -cp .;weka.jar DiagnosisClassifier "Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes"
+Output: 
+Command: java -cp .;weka.jar DiagnosisClassifier "Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes"
+Output: 
+Command: java -cp .;weka.jar DiagnosisClassifier "Yes,No,Yes,No,Yes,No,Yes,No,Yes,No,Yes"
+Output: 
+Command: 
+Output: Error: Expected a single CSV string as input.
+
